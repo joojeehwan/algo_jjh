@@ -8,7 +8,6 @@ def bfs():
     start = 1 #1번 노드 부터
 
     queue = deque([start])
-
   # 탐색 시작 노드를 방문처리
     visited[start] = True
 

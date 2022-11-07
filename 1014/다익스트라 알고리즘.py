@@ -52,6 +52,7 @@ while q:
     # 4. now를 꺼냄 (now : 지금 확정할 수 있는 점)
 
     # 5. next 찾기
+
     for cost, to in Graph[now_num]: # 아 이게 왜 TO 인지 알았다! 그래프의 구성을 생각!
         if dist[now_num] + cost >= dist[to]:
             continue # now를 거쳐 가는 방법이 전에 찾아놨던 방법보다 멀다.
@@ -118,7 +119,7 @@ def dijkstra(f, t):
     # 1. 그래프 구성 <-
     dist = [2134567890] * (n + 1)
     q = []
-    visited = [False] * (n + 1)
+
     # 3. 시작점 세팅
     dist[f] = 0
     heapq.heappush(q, (0, f))
